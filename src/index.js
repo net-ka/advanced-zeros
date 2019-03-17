@@ -8,19 +8,11 @@ module.exports = function getZerosCount(number, base) {
   let zeropos = 0;
       for (i = 2; i <= base; i++) {
         if (basek % i == 0) {
-
           for (p = 0; p <= simple.length; p++) {
             if (i == simple[p]) {
               basearr.push(i);
             }
           }
-
-          k = 1;
-          while (basek % Math.pow(i*k) == 0) {
-            k++;
-            basek = basek / Math.pow(i*k);
-          }
-          karr.push(k);
         } 
       }
 
@@ -31,11 +23,11 @@ module.exports = function getZerosCount(number, base) {
         for (n = 1; Math.floor(number/Math.pow(a,n)) > 0; n++) {
         zeros += Math.floor(number/Math.pow(a,n));
         }
-        zeropos = zeros / b;
+    
+        zeropos = zeros / 1;
         if (zeropos < zeropos1) {
         zeropos1 = zeropos;
         }
       }
     return zeropos1;
-  }
-
+}
